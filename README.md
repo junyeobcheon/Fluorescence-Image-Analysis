@@ -12,6 +12,9 @@ Before the CCD signal is interpreted as a proper fluorescence intensity, a backg
 The background signal comes mainly from dark signal(CCD's background current) and spurious noise(light intensity other than true fluorescence).
 In the 'multiple_background_reduction.py', various kinds of background noise are reduced by applying customized average filter and gaussian filter.
 
+![20210407 polTIRF background reduction2](https://user-images.githubusercontent.com/35727159/115662580-2494c800-a37a-11eb-818b-71adc8765d15.png)
+
+
 time_tracking: 
 
 하나의 샘플을 뽑아서 time tracking 을 해봄. 이 때 num_sig, max_sig, threshold 등 파라메터를 찾아야하기 때문에 미리 돌려보고 get_time_track_mat 을 수행하는게 좋다.
