@@ -26,8 +26,13 @@ The code confirms whether the two bright spots from two different frames come fr
 
 ![20210204 time tracking of blobs](https://user-images.githubusercontent.com/35727159/115664817-52c7d700-a37d-11eb-9d37-ce7154a1c3b8.png)
 
-get_time_track_mat: 
-operate_time_track: 
+## get_time_track_mat: 
+
+The time track of individual molecules is summarized and the information is saved in a matrix form.
+
+## operate_time_track: 
+
+The molecule's fluorescent emission is analyzed over the time. Each averaged intensity is recored and the histogram is generated out of them. 
 
 ![20210213 polTIRF analysis3](https://user-images.githubusercontent.com/35727159/115664726-2c09a080-a37d-11eb-857a-556eb9ba72f7.png)
 
