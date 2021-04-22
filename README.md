@@ -14,19 +14,24 @@ In the 'multiple_background_reduction.py', various kinds of background noise are
 
 ![20210407 polTIRF background reduction2](https://user-images.githubusercontent.com/35727159/115662580-2494c800-a37a-11eb-818b-71adc8765d15.png)
 
-
 time_tracking: 
+When the fluorescent molecules are continuously illuminated, the fluorescent molecule stops light emission. These phenomenon is called 'quenching'.
+'time_tracking.py' connects individual frames. this code visualizes the relationship between every bright spots in the two consecutive frames.
 
-하나의 샘플을 뽑아서 time tracking 을 해봄. 이 때 num_sig, max_sig, threshold 등 파라메터를 찾아야하기 때문에 미리 돌려보고 get_time_track_mat 을 수행하는게 좋다.
+The code confirms whether the two bright spots from two different frames come from an identical molecule by several rules. 
+1) When the distance between the two spots is greater than certain value (threshold), the two spots are distinguishable with each other.  
+2) In a single frame, when the two spots are too close to be separatly recognized, these two are excluded in the analysis.
+3) 
 
-get_time_track_mat: time trace mat 을 만들어준다. time tracking 을 통해 파라메터를 조절해놔야지 정보를 알맞게 뽑을 수 있다.
-
-operate_time_track: histogram 을 보여준다 여기서도 역시 파라메터를 잘 설정해서 원하는 결과가 나오도록 조절해야한다.
-
-
-
-
-
+![20210204 time tracking of blobs](https://user-images.githubusercontent.com/35727159/115664817-52c7d700-a37d-11eb-9d37-ce7154a1c3b8.png)
 
 
-I developed the codes here while I was in the graduate school (Master Course). I was investigating 
+get_time_track_mat: 
+operate_time_track: 
+
+![20210213 polTIRF analysis3](https://user-images.githubusercontent.com/35727159/115664726-2c09a080-a37d-11eb-857a-556eb9ba72f7.png)
+
+
+
+
+
