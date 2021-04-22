@@ -2,19 +2,19 @@
 
 The set of codes are developed by Junyeob Cheon in order for investigating the fluorescence signals of DNA-conjugated fluorophores.
 
-imagestack_pulling:
+## imagestack_pulling:
 The CCD camera records the time trace of fluorophores and gives a tif file as a result. When the whole video is saved as a single tif file, the image process is difficult. 
 
 'imagestack.py' turns the tif raw data into individual frames. That makes the image process easier.   
 
-multiple_background_reduction:
+## multiple_background_reduction:
 Before the CCD signal is interpreted as a proper fluorescence intensity, a background signal must be subtracted. The background signal comes mainly from dark signal(CCD's background current) and spurious noise(light intensity other than true fluorescence).
 
 In the 'multiple_background_reduction.py', various kinds of background noise are reduced by applying customized average filter and gaussian filter.
 
 ![20210407 polTIRF background reduction2](https://user-images.githubusercontent.com/35727159/115662580-2494c800-a37a-11eb-818b-71adc8765d15.png)
 
-time_tracking: 
+## time_tracking: 
 When the fluorescent molecules are continuously illuminated, the fluorescent molecule stops light emission. These phenomenon is called 'quenching'.
 
 'time_tracking.py' connects individual frames. this code visualizes the relationship between every bright spots in the two consecutive frames.
